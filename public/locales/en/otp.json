@@ -1,0 +1,17 @@
+{
+  "selfServiceRequest": "Self Service Request",
+  "step": "Step",
+  "fullName": "Full Name",
+  "email": "Email",
+  "phoneNumber": "Phone Number",
+  "sendOTP": "Send OTP",
+  "enterOTP": "Enter OTP",
+  "validateOTP": "Validate OTP",
+  "selectService": "Select a service",
+  "submitRequest": "Submit Request",
+  "serviceRequestSuccess": "Service request submitted successfully!",
+  "fullNameRequired": "Full name is required",
+  "invalidEmail": "Invalid email address",
+  "invalidPhoneNumber": "Invalid phone number",
+  "otpMustBe6Digits": "OTP must be 6 digits"
+}

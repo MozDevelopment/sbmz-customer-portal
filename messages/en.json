@@ -1,0 +1,196 @@
+{
+  "About": {
+    "title": "About"
+  },
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  },
+  "PageRoot": {
+    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
+    "title": "Page Root"
+  },
+  "PageLayout": {
+    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
+    "title": "Page Layout"
+  },
+  "LocaleRootPage": {
+    "title": "Customer Portal",
+    "titleWebSite": "Website",
+    "titleAbout": "About",
+    "navHelp": "Help"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, pt {🇲🇿 Portuguese} en {🇺🇸 English} zh {🇨🇳 Chinese} other {Unknown}}",
+    "selectLanguage": "Select the language"
+  },
+  "Manifest": {
+    "name": "next-intl example"
+  },
+  "Navigation": {
+    "home": "Home",
+    "pathnames": "Pathnames",
+    "title": "Cards "
+  },
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found",
+    "somethingMissing": "Something's missing",
+    "sorryPage": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "goBack": "Go back",
+    "goBackHome": "Back to Home"
+  },
+  "PathnamesPage": {
+    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to Portuguese, the URL is localized accordingly (<code>/pt/nomes-de-caminhos</code>).</p>",
+    "title": "Pathnames"
+  },
+  "Footer": {
+    "legalSection": "PAIA | Fica | NCA © 2024 | standardbank.co.mz is an Internet Banking service provided by Standard Bank, S.A., authorized under the legislation on financial consultancy and financial intermediation services.",
+    "sbgroup": "Standard Bank Group",
+    "about": "About us",
+    "legalNotice": "Legal Notice",
+    "privacyStatement": "Privacy Statement",
+    "accessConditions": "Access Conditions"
+  },
+  "Portal": {
+    "title": "Welcome to the Customer Portal",
+    "links": "Standard Bank Group"
+  },
+  "Dashboard": {
+    "title": "Welcome to the Customer Portal Dashboard",
+    "links": "Standard Bank Group"
+  },
+  "Card": {
+    "SignatureCard": {
+      "title": "Signature Card",
+      "description": "Get expert advice on investments, bespoke support from a dedicated Executive Banker  , and 24/7 support from a dedicated Signature banker.",
+      "yearlyFee": "4,999.99 MZN",
+      "withdrawLimit": "25 thousand",
+      "dailyWithdraw": "Daily withdrawals",
+      "monthlyFee": "Monthly fee",
+      "monthlyIncome": "Annual fee",
+      "applyNow": "APPLY NOW",
+      "tellMeMore": "TELL ME MORE",
+      "addToCompare": "Add to compare"
+    },
+    "InfiniteCard": {
+      "title": "Infinite Card",
+      "description": "Get expert advice on investment, 24/7 support from a dedicated Private Banker and unlimited* domestic and international airport lounge access through your bundled-in World Citizen  .",
+      "yearlyFee": "9,499.99 MZN",
+      "withdrawLimit": "30 thousand",
+      "dailyWithdraw": "Daily withdrawals",
+      "monthlyFee": "Monthly fee",
+      "monthlyIncome": "Annual fee",
+      "extraInfoLabel": "Offshore bank account",
+      "extraInfoValue": "Free",
+      "applyNow": "APPLY NOW",
+      "tellMeMore": "TELL ME MORE",
+      "addToCompare": "Add to compare"
+    }
+  },
+  "CustomerServiceLinks": {
+    "header": "Customer Self Service Links",
+    "helpText": "Hi! How may I help you?",
+    "cards": {
+      "selfService": {
+        "title": "Self Service",
+        "description": "Follow step by step to Register Requests and be assisted automatically to fulfill your needs.",
+        "icon": "/service-req.svg",
+        "link": "/selfservice/b"
+      },
+      "internetBanking": {
+        "title": "Internet Banking",
+        "description": "Access your account information & transactions. Pay bills and much more.",
+        "icon": "/internetbanking.svg",
+        "link": "/selfservice/internetbanking"
+      },
+      "personalAccountOpening": {
+        "title": "Personal Account Opening",
+        "description": "Open a brand new account or an additional account, conveniently and efficiently from your device.",
+        "icon": "/idaccount.svg",
+        "link": "/selfservice/accountopening"
+      },
+      "quiqChatBanking": {
+        "title": "Quiq Chat Banking",
+        "description": "Fast and conversational way to perform bank transactions. Say 'Hello' to start chatting.",
+        "icon": "/callcenter.svg",
+        "link": "/selfservice/quiqchat"
+      }
+    }
+  },
+  "BotsService": {
+    "header": "Bot Services",
+    "helpText": "Select a service to get started",
+    "cards": {
+      "nationalTransfers": {
+        "title": "National and International Transfers",
+        "description": "Obtain proof of transfer quickly and securely.",
+        "icon": "/bots/international_payments.svg",
+        "link": "/selfservice/clientrequest"
+      },
+      "accountDetailsLetter": {
+        "title": "Account Details Letter",
+        "description": "Request and receive your account details letter.",
+        "icon": "/bots/bankletter.svg",
+        "link": "/selfservice/clientrequest"
+      },
+      "internationalTransfers": {
+        "title": "International Transfers",
+        "description": "Obtain stamped proof of your payments.",
+        "icon": "/bots/bourderaux.svg",
+        "link": "/selfservice/clientrequest"
+      },
+      "statementsAndBalance": {
+        "title": "Statements and Balance",
+        "description": "Request a detailed account statement and balance.",
+        "icon": "/bots/statement2.svg",
+        "link": "/selfservice/clientrequest"
+      }
+    }
+  },
+  "RequestPage": {
+    "cardTitle": "Self Service Request",
+    "stepDescription": "Step {step} of 4",
+    "backButton": "Back",
+    "nextButton": "Next",
+    "submitButton": "Submit",
+    "toasts": {
+      "initialSubmit": {
+        "title": "Initial information submitted",
+        "description": "Please check your email or phone for the OTP."
+      },
+      "otpVerified": {
+        "title": "OTP verified",
+        "description": "Please select your service and date range."
+      },
+      "serviceSubmit": {
+        "title": "Service request submitted",
+        "description": "Your ticket number is {ticketNumber}"
+      },
+      "error": {
+        "title": "Error",
+        "initialSubmit": "Failed to submit initial information. Please try again.",
+        "otpVerify": "Failed to verify OTP. Please try again.",
+        "serviceSubmit": "Failed to submit service request. Please try again."
+      }
+    }
+  },
+  "Header": {
+    "mainNavLabel": "Main navigation",
+    "personal": "Personal",
+    "business": "Business",
+    "corporate": "Corporate and Institutions",
+    "news": "News and Media",
+    "about": "About us",
+    "locate": "Locate Us",
+    "contact": "Contact us",
+    "flagAlt": "Mozambique flag",
+    "currentLanguage": "Current language"
+  },
+  "NavigationSite": {
+    "productsAndServices": "Products and Services",
+    "standardBankConnect": "Standard Bank Connect",
+    "learn": "Learn"
+  }
+}

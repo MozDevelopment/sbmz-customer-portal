@@ -1,0 +1,196 @@
+{
+  "About": {
+    "title": "关于"
+  },
+  "Error": {
+    "description": "<p>很遗憾，我们遇到了错误。</p><p>您可以尝试<retry>重新加载您正在访问的页面</retry>。</p>",
+    "title": "出现错误！"
+  },
+  "PageRoot": {
+    "description": "这是一个基本示例，演示了如何使用 Next.js App Router 中的 <code>next-intl</code>。尝试更改右上角的语言环境，看看内容如何变化。",
+    "title": "页面根目录"
+  },
+  "PageLayout": {
+    "description": "这是一个基本示例，演示了如何将 <code>next-intl</code> 与 Next.js App Router 结合使用。尝试更改右上角的语言环境，看看内容如何变化。",
+    "title": "页面布局"
+  },
+  "LocaleRootPage": {
+    "title": "客户门户",
+    "titleWebSite": "网站",
+    "titleAbout": "关于",
+    "navHelp": "帮助"
+  },
+  "LocaleSwitcher": {
+    "label": "更改语言",
+    "locale": "{locale, select, pt {🇲🇿 葡萄牙语} en {🇺🇸 英语} zh {🇨🇳 中文} other {未知}}",
+    "selectLanguage": "选择语言"
+  },
+  "Manifest": {
+    "name": "next-intl 示例"
+  },
+  "Navigation": {
+    "home": "主页",
+    "pathnames": "路径名",
+    "title": "卡"
+  },
+  "NotFoundPage": {
+    "description": "请仔细检查浏览器地址栏或使用导航转到已知页面。",
+    "title": "页面未找到",
+    "somethingMissing": "缺少内容",
+    "sorryPage": "抱歉，您查找的页面不存在或已被移动。",
+    "goBack": "返回",
+    "goBackHome": "返回主页"
+  },
+  "PathnamesPage": {
+    "description": "<p>路径名也是国际化的。</p><p>如果您使用的是默认语言英语，您将在此浏览器地址栏中看到 <code>/en/pathnames</code> 页面。</p><p>如果您将语言环境更改为葡萄牙语，URL 会相应地本地化 (<code>/pt/nomes-de-caminhos</code>)。</p>",
+    "title": "路径名"
+  },
+  "Footer": {
+    "legalSection": "PAIA | Fica | NCA © 2024 | standardbank.co.mz 是标准银行 S.A. 提供的网上银行服务，根据金融咨询和金融中介服务立法获得授权。",
+    "sbgroup": "标准银行集团",
+    "about": "关于我们",
+    "legalNotice": "法律声明",
+    "privacyStatement": "隐私声明",
+    "accessConditions": "访问条件"
+  },
+  "Portal": {
+    "title": "欢迎使用客户门户",
+    "links": "标准银行集团"
+  },
+  "Dashboard": {
+    "title": "欢迎来到客户门户仪表板",
+    "links": "标准银行集团"
+  },
+  "Card": {
+    "SignatureCard": {
+      "title": "签名银行账户",
+      "description": "获取投资方面的专家建议、 的量身定制财富管理和 24/7 支持。",
+      "yearlyFee": "4,999.99 MZN",
+      "withdrawLimit": "25 千",
+      "dailyWithdraw": "每日取款",
+      "monthlyFee": "月费",
+      "monthlyIncome": "年费",
+      "applyNow": "立即申请",
+      "tellMeMore": "了解更多",
+      "addToCompare": "加入对比"
+    },
+    "InfiniteCard": {
+      "title": "无限银行账户",
+      "description": "获取投资方面的专家建议，24/7 专属私人银行家支持，享受无限制*的国内和国际机场贵宾室服务。",
+      "yearlyFee": "9,499.99 MZN",
+      "withdrawLimit": "30 千",
+      "dailyWithdraw": "每日取款",
+      "monthlyFee": "月费",
+      "monthlyIncome": "年费",
+      "extraInfoLabel": "离岸银行账户",
+      "extraInfoValue": "免费",
+      "applyNow": "立即申请",
+      "tellMeMore": "了解更多",
+      "addToCompare": "加入对比"
+    }
+  },
+  "CustomerServiceLinks": {
+    "header": "客户自助服务链接",
+    "helpText": "你好！我可以帮你什么吗？",
+    "cards": {
+      "selfService": {
+        "title": "自助服务",
+        "description": "按照步骤注册请求，系统将自动为您提供帮助。",
+        "icon": "/service-req.svg",
+        "link": "/selfservice/b"
+      },
+      "internetBanking": {
+        "title": "网上银行",
+        "description": "访问您的账户信息和交易。支付账单等。",
+        "icon": "/internetbanking.svg",
+        "link": "/selfservice/internetbanking"
+      },
+      "personalAccountOpening": {
+        "title": "个人账户开通",
+        "description": "便捷高效地从您的设备开设新账户或附加账户。",
+        "icon": "/idaccount.svg",
+        "link": "/selfservice/accountopening"
+      },
+      "quiqChatBanking": {
+        "title": "Quiq 聊天银行",
+        "description": "快速且对话式地进行银行交易。说‘你好’开始聊天。",
+        "icon": "/callcenter.svg",
+        "link": "/selfservice/quiqchat"
+      }
+    }
+  },
+  "BotsService": {
+    "header": "机器人服务",
+    "helpText": "选择服务开始",
+    "cards": {
+      "nationalTransfers": {
+        "title": "国内转账",
+        "description": "快速安全地获取转账凭证。",
+        "icon": "/bots/international_payments.svg",
+        "link": "/selfservice/client/request/national-transfers"
+      },
+      "accountDetailsLetter": {
+        "title": "账户详情函",
+        "description": "请求并接收您的账户详情函。",
+        "icon": "/bots/bankletter.svg",
+        "link": "/selfservice/client/request/account-details-letter"
+      },
+      "internationalTransfers": {
+        "title": "国际转账 - Bordeaux",
+        "description": "轻松进行国际转账。",
+        "icon": "/bots/bourderaux.svg",
+        "link": "/selfservice/client/request/international-transfers"
+      },
+      "statementsAndBalance": {
+        "title": "对账单和余额",
+        "description": "请求您的账户对账单和当前余额。",
+        "icon": "/bots/statement2.svg",
+        "link": "/selfservice/client/request/statements-balance"
+      }
+    }
+  },
+  "RequestPage": {
+    "cardTitle": "自助服务请求",
+    "stepDescription": "第 {step} 步，共 4 步",
+    "backButton": "返回",
+    "nextButton": "下一步",
+    "submitButton": "提交",
+    "toasts": {
+      "initialSubmit": {
+        "title": "初始信息已提交",
+        "description": "请检查您的电子邮件或电话以获取 OTP。"
+      },
+      "otpVerified": {
+        "title": "OTP 已验证",
+        "description": "请选择您的服务和日期范围。"
+      },
+      "serviceSubmit": {
+        "title": "服务请求已提交",
+        "description": "您的票号是 {ticketNumber}"
+      },
+      "error": {
+        "title": "错误",
+        "initialSubmit": "提交初始信息失败。请再试一次。",
+        "otpVerify": "OTP 验证失败。请再试一次。",
+        "serviceSubmit": "提交服务请求失败。请再试一次。"
+      }
+    }
+  },
+  "Header": {
+    "mainNavLabel": "主导航",
+    "personal": "个人",
+    "business": "业务",
+    "corporate": "企业与机构",
+    "news": "新闻与媒体",
+    "about": "关于我们",
+    "locate": "找到我们",
+    "contact": "联系我们",
+    "flagAlt": "莫桑比克国旗",
+    "currentLanguage": "当前语言"
+  },
+  "NavigationSite": {
+    "productsAndServices": "产品与服务",
+    "standardBankConnect": "标准银行连接",
+    "learn": "学习"
+  }
+}

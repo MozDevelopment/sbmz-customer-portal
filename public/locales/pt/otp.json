@@ -1,0 +1,17 @@
+{
+  "selfServiceRequest": "Pedido de Auto-Serviço",
+  "step": "Passo",
+  "fullName": "Nome Completo",
+  "email": "E-mail",
+  "phoneNumber": "Número de Telefone",
+  "sendOTP": "Enviar OTP",
+  "enterOTP": "Inserir OTP",
+  "validateOTP": "Validar OTP",
+  "selectService": "Selecione um serviço",
+  "submitRequest": "Enviar Pedido",
+  "serviceRequestSuccess": "Pedido de serviço enviado com sucesso!",
+  "fullNameRequired": "O nome completo é obrigatório",
+  "invalidEmail": "Endereço de e-mail inválido",
+  "invalidPhoneNumber": "Número de telefone inválido",
+  "otpMustBe6Digits": "O OTP deve ter 6 dígitos"
+}
