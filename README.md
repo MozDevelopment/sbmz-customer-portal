@@ -41,14 +41,33 @@ This portal is powered by a combination of modern web technologies:
 ## 📦 **Project Structure**
 
 ```bash
-.
-├── /components      # Reusable UI components
-├── /pages           # Next.js pages (includes routing and localization)
-├── /public          # Public assets (images, icons)
-├── /styles          # Global CSS and Tailwind styles
-└── /utils           # Utility functions and helpers
+├── /app                 # Core application directory
+│   ├── /[locale]        # Locale-based directories for i18n (internationalization)
+│   │   ├── /cards       # Locale-specific card-related pages
+│   │   ├── /dashboard   # Locale-specific dashboard-related pages
+│   │   ├── /portal      # Locale-specific portal-related pages
+│   │   └── /selfservice # Locale-specific self-service pages
+│   │       └── /clientrequest  # Self-service client request feature
+│   ├── /fonts           # Custom fonts used by the application
+│   │   └── /BentonSans  # BentonSans font files
+│   ├── /i18n            # Internationalization setup and configuration
+│   └── /website         # Main website pages
+├── /components          # Reusable UI components
+│   ├── /layout          # Layout components (headers, footers, etc.)
+│   └── /ui              # Small reusable UI components (buttons, cards)
+├── /hooks               # Custom React hooks for shared logic
+├── /lib                 # Library and helper functions
+├── /messages            # Message and notification templates
+├── /public              # Static assets accessible from the root URL
+│   ├── /bots            # Assets for bots
+│   ├── /cards           # Card-related images and assets
+│   ├── /images          # General public images
+│   └── /locales         # Language files for i18n
+│       ├── /en          # English translations
+│       └── /pt          # Portuguese translations
+└── /scripts             # Utility scripts for the project
+
 ```
- 
 
 ## 🏗️ Getting Started
 
@@ -71,67 +90,78 @@ Ensure you have the following installed:
    cd sbmz-customer-portal
 
    yarn install
+   ```
 
 
 🚀 Running the Project
 To start the development server:
 
-bash
-Copy code
+```bash 
 yarn dev
+
 Once started, visit http://localhost:3000 to view the application in your browser.
+```
 
 🔨 Building for Production
 To create an optimized production build:
 
-bash
-Copy code
+```bash 
 yarn build
 🎯 Starting the Production Server
 After building, you can start the production server with:
+```
 
-bash
-Copy code
+```bash 
 yarn start
 🧹 Linting and Code Formatting
 Run ESLint to analyze code quality:
+```
 
-bash
-Copy code
+```bash 
 yarn lint
-Automatically fix linting issues:
 
-bash
-Copy code
+Automatically fix linting issues:
+```
+
+```bash 
 yarn lint:fix
+
+```
+
+```bash 
 Format the code using Prettier:
 
-bash
-Copy code
 yarn format
-🌐 Internationalization
+```
+
+## 🌐 Internationalization
 This portal supports the following languages:
+
 
 🇲🇿 Portuguese
 🇺🇸 English
 🇨🇳 Chinese
 You can switch between these languages using the language selector located in the top-right corner of the app.
 
-🔧 Environment Variables
+### 🔧 Environment Variables
 To configure the environment, create a .env.local file at the root of the project and add the following variables:
 
-bash
-Copy code
+```bash 
 NEXT_PUBLIC_API_URL=<Your API URL>
 NEXT_PUBLIC_ANALYTICS_ID=<Your Analytics ID>
-🧑‍💻 Development
-Folder Structure:
+```
+
+## 🧑‍💻 Development
+
+ 
+#### Folder Structure:
 
 components/: Contains reusable React components.
 pages/: Next.js page routes and API routes.
 public/: Static assets like images and fonts.
 styles/: Global CSS and Tailwind configurations.
-Custom Scripts:
+
+#### Custom Scripts:
 
 Dev: Start the development server with yarn dev.
 Build: Generate a production build using yarn build.
@@ -139,34 +169,38 @@ Start: Start the production server with yarn start.
 Lint: Check code quality with yarn lint.
 Fix Lint: Automatically fix lint issues with yarn lint:fix.
 Format: Run Prettier to format your code with yarn format.
-💡 Contributing
+
+### 💡 Contributing
 We welcome contributions to improve the portal! Follow the steps below to contribute:
 
 Fork the repository.
 
 Create a new branch for your feature or bugfix:
 
-bash
-Copy code
+```bash 
 git checkout -b feature/new-feature
 Make your changes and commit them:
+```
 
-bash
-Copy code
+```bash 
 git commit -m "Add new feature"
 Push to your branch:
+```
 
-bash
-Copy code
+```bash 
 git push origin feature/new-feature
 Open a Pull Request!
+```
 
-📝 Changelog
-v0.1.0
+## 📝 Changelog
+
+```v0.1.0```
 Initial release with core banking features.
 Multilingual support (🇲🇿 Portuguese, 🇺🇸 English, 🇨🇳 Chinese).
 Self-service and bot services enabled.
-📄 License
+
+
+#### 📄 License
 This project is licensed under the Standard Bank Mozambique Terms of Use.
 
 💻 Developed by: Standard Bank Mozambique Digital Channels Team.
