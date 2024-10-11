@@ -23,7 +23,8 @@
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, pt {🇲🇿 Portuguese} en {🇺🇸 English} zh {🇨🇳 Chinese} other {Unknown}}",
-    "selectLanguage": "Select the language"
+    "selectLanguage": "Select the language",
+    "flagAlt": "English "
   },
   "Manifest": {
     "name": "next-intl example"
@@ -97,7 +98,7 @@
         "title": "Self Service",
         "description": "Follow step by step to Register Requests and be assisted automatically to fulfill your needs.",
         "icon": "/service-req.svg",
-        "link": "/selfservice/b"
+        "link": "/selfservice/clientrequest"
       },
       "internetBanking": {
         "title": "Internet Banking",
@@ -192,5 +193,16 @@
     "productsAndServices": "Products and Services",
     "standardBankConnect": "Standard Bank Connect",
     "learn": "Learn"
+  },
+  "SubmissionConfirmation": {
+    "title": "YOur request has been submitted",
+    "description": "Please check your email or phone for the OTP.",
+    "serviceRequested": "Service Requested",
+    "requestNumber": "Request Number",
+    "submissionDate": "submission date",
+    "submitAnother": "Submit another request",
+    "backToHome": "Go to home page",
+
+    "checkEmail": "Check your email"
   }
 }

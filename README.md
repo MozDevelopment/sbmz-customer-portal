@@ -5,26 +5,32 @@ Welcome to the **Standard Bank Mozambique Customer Portal**! This portal provide
 ## 🚀 Features
 
 ### 🌍 **Internationalization**
+
 - Supports multiple languages: 🇲🇿 Portuguese, 🇺🇸 English, 🇨🇳 Chinese.
 - URLs are fully localized (e.g., `/en/pathnames` for English, `/pt/nomes-de-caminhos` for Portuguese).
 
 ### 💳 **Card Services**
+
 - **Signature Card**: Get expert advice on investments, bespoke support from an Executive Banker, and 24/7 Signature Banking support.
 - **Infinite Card**: Premium services with private banking, lounge access, and dedicated investment advice.
 
 ### 🛠️ **Self Service Links**
+
 - **Internet Banking**: Access accounts, transactions, bill payments, and more.
 - **Personal Account Opening**: Open or manage accounts entirely online.
 - **Quiq Chat Banking**: Chat-based banking for quick and easy transactions.
 
 ### 🤖 **Bot Services**
+
 - **National & International Transfers**: Manage transfers and receive proof instantly.
 - **Statements and Balances**: Request account statements and view balances on-demand.
-  
+
 ### ⚠️ **Error Handling**
+
 - User-friendly error pages with actionable steps for recovery.
 
 ### 🏠 **Customer Dashboard**
+
 - A customizable and easy-to-use dashboard to manage all services.
 
 ## 🛠️ **Tech Stack**
@@ -92,11 +98,10 @@ Ensure you have the following installed:
    yarn install
    ```
 
-
 🚀 Running the Project
 To start the development server:
 
-```bash 
+```bash
 yarn dev
 
 Once started, visit http://localhost:3000 to view the application in your browser.
@@ -105,38 +110,38 @@ Once started, visit http://localhost:3000 to view the application in your browse
 🔨 Building for Production
 To create an optimized production build:
 
-```bash 
+```bash
 yarn build
 🎯 Starting the Production Server
 After building, you can start the production server with:
 ```
 
-```bash 
+```bash
 yarn start
 🧹 Linting and Code Formatting
 Run ESLint to analyze code quality:
 ```
 
-```bash 
+```bash
 yarn lint
 
 Automatically fix linting issues:
 ```
 
-```bash 
+```bash
 yarn lint:fix
 
 ```
 
-```bash 
+```bash
 Format the code using Prettier:
 
 yarn format
 ```
 
 ## 🌐 Internationalization
-This portal supports the following languages:
 
+This portal supports the following languages:
 
 🇲🇿 Portuguese
 🇺🇸 English
@@ -144,16 +149,16 @@ This portal supports the following languages:
 You can switch between these languages using the language selector located in the top-right corner of the app.
 
 ### 🔧 Environment Variables
+
 To configure the environment, create a .env.local file at the root of the project and add the following variables:
 
-```bash 
+```bash
 NEXT_PUBLIC_API_URL=<Your API URL>
 NEXT_PUBLIC_ANALYTICS_ID=<Your Analytics ID>
 ```
 
 ## 🧑‍💻 Development
 
- 
 #### Folder Structure:
 
 components/: Contains reusable React components.
@@ -171,40 +176,37 @@ Fix Lint: Automatically fix lint issues with yarn lint:fix.
 Format: Run Prettier to format your code with yarn format.
 
 ### 💡 Contributing
+
 We welcome contributions to improve the portal! Follow the steps below to contribute:
 
 Fork the repository.
 
 Create a new branch for your feature or bugfix:
 
-```bash 
+```bash
 git checkout -b feature/new-feature
 Make your changes and commit them:
 ```
 
-```bash 
+```bash
 git commit -m "Add new feature"
 Push to your branch:
 ```
 
-```bash 
+```bash
 git push origin feature/new-feature
 Open a Pull Request!
 ```
 
 ## 📝 Changelog
 
-```v0.1.0```
+`v0.1.0`
 Initial release with core banking features.
 Multilingual support (🇲🇿 Portuguese, 🇺🇸 English, 🇨🇳 Chinese).
 Self-service and bot services enabled.
 
-
 #### 📄 License
+
 This project is licensed under the Standard Bank Mozambique Terms of Use.
 
 💻 Developed by: Standard Bank Mozambique Digital Channels Team.
-
-
-
-

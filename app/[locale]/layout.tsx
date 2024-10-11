@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   description: 'Standard Bank Self Service App',
 }
 
-export default async function RootLayout({
+export default async function AppLayout({
   children,
   params: { locale },
 }: Readonly<{

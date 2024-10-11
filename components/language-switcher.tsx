@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useTransition } from 'react'
+import React, { useTransition, useCallback } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import {
   Select,
@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
 import { Locale, usePathname, useRouter } from '@/app/i18n/routing'
-import { useParams } from 'next/navigation'
 
 const LoadingSpinner = () => (
   <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50">
@@ -25,7 +24,6 @@ export default function LanguageSwitcher() {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
-  const params = useParams()
 
   const locales = [
     { value: 'en', label: t('locale', { locale: 'en' }) },
@@ -41,11 +39,14 @@ export default function LanguageSwitcher() {
     }`,
   }
 
-  const localeChangeHandler = (newLocale: string) => {
-    startTransition(() => {
-      router.replace({ pathname, params }, { locale: newLocale as Locale })
-    })
-  }
+  const localeChangeHandler = useCallback(
+    (newLocale: string) => {
+      startTransition(() => {
+        router.replace(pathname, { locale: newLocale as Locale })
+      })
+    },
+    [router, pathname]
+  )
 
   return (
     <div className={styles.container}>

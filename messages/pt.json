@@ -191,5 +191,16 @@
     "productsAndServices": "Produtos e Serviços",
     "standardBankConnect": "Conectar Standard Bank",
     "learn": "Aprender"
+  },
+  "SubmissionConfirmation": {
+    "title": "O seu pedido foi enviado",
+    "description": "Por favor, verifique o seu e-mail ou telefone para obter a OTP.",
+    "serviceRequested": "Serviço solicitado",
+    "requestNumber": "Número do pedido",
+    "submissionDate": "data de envio",
+    "submitAnother": "Enviar outro pedido",
+    "backToHome": "Ir para a página inicial",
+
+    "checkEmail": "Verifique o seu e-mail"
   }
 }

@@ -1,8 +1,9 @@
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { SubmitHandler } from 'react-hook-form'
+import { SubmitHandler, UseFormReturn } from 'react-hook-form'
 import * as z from 'zod'
-// Step 1: Initial Form
+
+// Step 1: Initial Form Schema
 const initialFormSchema = z.object({
   fullName: z.string().min(2, 'Full name is required'),
   email: z.string().email('Invalid email address'),
@@ -11,10 +12,12 @@ const initialFormSchema = z.object({
 
 type InitialFormValues = z.infer<typeof initialFormSchema>
 
-const InitialForm: React.FC<{ form: any; onSubmit: SubmitHandler<InitialFormValues> }> = ({
-  form,
-  onSubmit,
-}) => {
+interface InitialFormProps {
+  form: UseFormReturn<InitialFormValues>
+  onSubmit: SubmitHandler<InitialFormValues>
+}
+
+const InitialForm: React.FC<InitialFormProps> = ({ form, onSubmit }) => {
   const {
     register,
     handleSubmit,

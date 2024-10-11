@@ -9,16 +9,6 @@ interface BotsServiceProps {
   onServiceSelect: (service: string) => void
 }
 
-/**
- * Component that renders a grid of service cards. Each card is a button that
- * will call the onServiceSelect prop when clicked.
- *
- * @param {BotsServiceProps} props
- * @prop {Function} onServiceSelect - Callback function that will be called when
- * a service card is clicked. It will receive the title of the service that was
- * clicked as an argument.
- * @returns {ReactElement}
- */
 const BotsService: React.FC<BotsServiceProps> = ({ onServiceSelect }) => {
   const t = useTranslations('BotsService')
   const { locale } = useParams()

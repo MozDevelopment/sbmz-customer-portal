@@ -1,11 +1,10 @@
 'use client'
 
-import React, { useState, useTransition } from 'react'
+import React, { useState, useTransition, useCallback } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ChevronDown } from 'lucide-react'
 import { Locale, usePathname, useRouter } from '@/app/i18n/routing'
-import { useParams } from 'next/navigation'
 
 const LoadingSpinner = () => (
   <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50">
@@ -19,7 +18,6 @@ export default function LanguageSwitcherSite() {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
-  const params = useParams()
   const [isOpen, setIsOpen] = useState(false)
 
   const locales = [
@@ -28,12 +26,15 @@ export default function LanguageSwitcherSite() {
     { value: 'zh', label: t('locale', { locale: 'zh' }), image: '/zhflag_circle.svg' },
   ]
 
-  const localeChangeHandler = (newLocale: Locale) => {
-    startTransition(() => {
-      router.replace({ pathname, params }, { locale: newLocale })
-      setIsOpen(false)
-    })
-  }
+  const localeChangeHandler = useCallback(
+    (newLocale: Locale) => {
+      startTransition(() => {
+        router.replace(pathname, { locale: newLocale })
+        setIsOpen(false)
+      })
+    },
+    [router, pathname]
+  )
 
   const currentLocale = locales.find(({ value }) => value === locale)
 
@@ -64,7 +65,9 @@ export default function LanguageSwitcherSite() {
           {locales.map(({ value, label, image }) => (
             <li key={value} role="option" aria-selected={locale === value}>
               <button
-                className={`w-full px-4 py-2 text-left hover:bg-blue-100 ${locale === value ? 'font-bold' : ''}`}
+                className={`w-full px-4 py-2 text-left hover:bg-blue-100 ${
+                  locale === value ? 'font-bold' : ''
+                }`}
                 onClick={() => localeChangeHandler(value as Locale)}
               >
                 <Image

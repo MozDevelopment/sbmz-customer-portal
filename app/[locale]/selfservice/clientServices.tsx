@@ -1,16 +1,15 @@
 'use client'
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { useParams, useRouter } from 'next/navigation'
 import CardService from './cardService'
-import { useParams } from 'next/navigation'
 
 const CustomerServiceLinks: React.FC = () => {
-  const t = useTranslations('CustomerServiceLinks') // Use translation hook
+  const t = useTranslations('CustomerServiceLinks')
   const { locale } = useParams()
-  // console.info(locale);
+  const router = useRouter()
 
   const cards = [
     {
@@ -43,6 +42,30 @@ const CustomerServiceLinks: React.FC = () => {
     },
   ]
 
+  const handleCardClick = useCallback(
+    (card: (typeof cards)[0]) => {
+      // Log the interaction for analytics
+      console.log(`Card clicked: ${card.title}`)
+
+      // You can add more detailed logging here, e.g.:
+      const interactionData = {
+        cardId: card.id,
+        cardTitle: card.title,
+        timestamp: new Date().toISOString(),
+        locale: locale,
+      }
+      console.log('Interaction data:', interactionData)
+
+      // Here you would typically send this data to your analytics service
+      // For example:
+      // analyticsService.logInteraction(interactionData)
+
+      // Navigate to the card's link
+      router.push(`/${locale}${card.link}`)
+    },
+    [locale, router]
+  )
+
   const selfServiceHeader = (
     <header className="mb-8">
       <Link href="/onboarding" className="flex w-fit items-center gap-10 p-10">
@@ -57,10 +80,14 @@ const CustomerServiceLinks: React.FC = () => {
   return (
     <div className="flex-1 p-8">
       {selfServiceHeader}
-      {/* Grid of service cards */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => (
-          <CardService key={card.id} {...card} locale={locale as string} />
+          <CardService
+            key={card.id}
+            {...card}
+            locale={locale as string}
+            onClick={() => handleCardClick(card)}
+          />
         ))}
       </div>
     </div>

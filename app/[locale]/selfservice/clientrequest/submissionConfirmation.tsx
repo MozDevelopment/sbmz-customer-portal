@@ -1,37 +1,60 @@
+'use client'
+
 import React from 'react'
-import { Button } from '@/components/ui/button' // Assuming you're using Heroicons, otherwise replace with your own SVG
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 interface SubmissionConfirmationProps {
   ticketNumber: string
   date: string
+  service: string | null
 }
 
-const SubmissionConfirmation: React.FC<SubmissionConfirmationProps> = ({ ticketNumber, date }) => {
-  const publicResource = {
-    title: 'Self Service',
-    description:
-      "Follow step by step to Register into Quiq or NetPlus. Learn about your spending habits with 'My Financial Check' and more, with just a click.",
-    icon: '/greencheck.svg',
-    link: '/selfservice/clientrequest',
+const SubmissionConfirmation: React.FC<SubmissionConfirmationProps> = ({
+  ticketNumber,
+  date,
+  service,
+}) => {
+  const router = useRouter()
+  const t = useTranslations('SubmissionConfirmation')
+
+  const handleSubmitAnother = () => {
+    router.refresh()
   }
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <p className="text-lg font-semibold">Your request has been submitted!</p>
-      <p className="text-sm">
-        Request #: <span className="font-mono">{ticketNumber}</span>
-      </p>
-      <p className="text-sm">Date: {date}</p>
-      <Button onClick={() => window.location.reload()}>Submit Another Request</Button>{' '}
-      {/* Optional */}
+    <div className="flex flex-col items-center justify-center space-y-6 text-center">
       <Image
-        src={publicResource.icon}
-        alt={`${publicResource.title} icon`}
+        src="/greencheck.svg"
+        alt=""
         width={84}
         height={84}
         className="mb-4"
+        aria-hidden="true"
       />
+      <h2 className="text-2xl font-semibold text-green-600">{t('title')}</h2>
+      <div className="space-y-2 text-gray-700">
+        <p className="text-lg">
+          {t('serviceRequested')}: <span className="font-medium">{service}</span>
+        </p>
+        <p>
+          {t('requestNumber')}: <span className="font-mono font-medium">{ticketNumber}</span>
+        </p>
+        <p>
+          {t('submissionDate')}: <span className="font-medium">{date}</span>
+        </p>
+      </div>
+      <div className="mt-6 space-y-4">
+        <Button onClick={handleSubmitAnother} className="w-full">
+          {t('submitAnother')}
+        </Button>
+        <Button variant="outline" className="w-full" onClick={() => router.push('/')}>
+          {t('backToHome')}
+        </Button>
+      </div>
+      {/* <p className="text-sm text-gray-500">{t('checkEmail')}</p> */}
     </div>
   )
 }

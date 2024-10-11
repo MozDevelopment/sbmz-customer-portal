@@ -29,9 +29,8 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block rounded px-3 py-2 transition-colors hover:bg-blue-100 ${
-                    item.className || ''
-                  }`}
+                  className={`block rounded px-3 py-2 transition-colors hover:bg-blue-100 ${item.className || ''
+                    }`}
                 >
                   {item.label}
                 </Link>

@@ -23,7 +23,8 @@
   "LocaleSwitcher": {
     "label": "更改语言",
     "locale": "{locale, select, pt {🇲🇿 葡萄牙语} en {🇺🇸 英语} zh {🇨🇳 中文} other {未知}}",
-    "selectLanguage": "选择语言"
+    "selectLanguage": "选择语言",
+    "flagAlt": "英语"
   },
   "Manifest": {
     "name": "next-intl 示例"

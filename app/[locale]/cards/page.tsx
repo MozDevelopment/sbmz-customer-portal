@@ -1,9 +1,12 @@
+import { FC } from 'react'
 import Cards from './cards'
 
-export default function Page() {
+const Page: FC = () => {
   return (
     <div className="py-8">
       <Cards />
     </div>
   )
 }
+
+export default Page

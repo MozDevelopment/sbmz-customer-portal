@@ -1,5 +1,5 @@
 import Cards from './cards'
-import Header from './header'
+import Header from '../../website/web-site-header'
 import Navigation from './navigation'
 
 const Layout = () => {

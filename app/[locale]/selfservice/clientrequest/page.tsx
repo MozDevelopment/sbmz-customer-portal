@@ -131,7 +131,7 @@ export default function RequestPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <Card className="mx-auto w-full">
+      <Card className="mx-auto">
         <CardHeader>
           <CardTitle>{t('cardTitle')}</CardTitle>
           <CardDescription>{t('stepDescription', { step: step + 1 })}</CardDescription>
