@@ -1,4 +1,3 @@
-import { getMessages } from 'next-intl/server'
 import { Header } from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Sidebar } from '@/components/sidebar'
@@ -11,8 +10,6 @@ export default async function PortalLayout({
   children: React.ReactNode
   params: { locale: string }
 }>) {
-  const messages = await getMessages()
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />

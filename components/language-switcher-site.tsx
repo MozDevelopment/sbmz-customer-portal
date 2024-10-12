@@ -21,9 +21,9 @@ export default function LanguageSwitcherSite() {
   const [isOpen, setIsOpen] = useState(false)
 
   const locales = [
-    { value: 'en', label: t('locale', { locale: 'en' }), image: '/ukflag_circle.svg' },
-    { value: 'pt', label: t('locale', { locale: 'pt' }), image: '/circle-mz.png' },
-    { value: 'zh', label: t('locale', { locale: 'zh' }), image: '/zhflag_circle.svg' },
+    { value: 'en', label: t('locale', { locale: 'en' }), image: '/flags/ukflag_circle.svg' },
+    { value: 'pt', label: t('locale', { locale: 'pt' }), image: '/flags/circle-mz.png' },
+    { value: 'zh', label: t('locale', { locale: 'zh' }), image: '/flags/zhflag_circle.svg' },
   ]
 
   const localeChangeHandler = useCallback(

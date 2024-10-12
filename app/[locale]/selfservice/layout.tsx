@@ -1,11 +1,11 @@
-import type { PropsWithChildren } from 'react'
-import { Header } from '@/components/Header'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import type { PropsWithChildren } from 'react'
 const SelfServiceLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="min-h-screen bg-gray-100">
       <Header />
-      <div className="flex flex-1 bg-[url('/images/signin-bg.jpg')]">{children}</div>
+      <main className="container mx-auto px-4 py-4">{children}</main>
       <Footer />
     </div>
   )

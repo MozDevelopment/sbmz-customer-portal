@@ -1,11 +1,16 @@
+import WebsiteHeader from '../website/web-site-header'
 import Cards from './cards'
-import Header from '../../website/web-site-header'
 import Navigation from './navigation'
 
+/**
+ * The root layout component for the cards page.
+ *
+ * @returns The JSX Element for the layout.
+ */
 const Layout = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Header />
+      <WebsiteHeader />
       <Navigation />
       <main className="container mx-auto px-4 py-8">
         <Cards />

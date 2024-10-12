@@ -1,5 +1,6 @@
+import { Header } from '@/components/Header'
 import CustomerServiceLinks from './clientServices'
-const Services = () => {
+const Page = () => {
   return (
     <>
       <CustomerServiceLinks />
@@ -7,4 +8,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Page

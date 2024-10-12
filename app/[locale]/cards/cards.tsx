@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
 import { useTranslations } from 'next-intl' // Importing the i18n function
-const Cards = () => {
+const Cards = (): JSX.Element => {
   const t = useTranslations('Card') // Use the translation hook
 
   const accountCards = [

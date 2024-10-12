@@ -24,7 +24,8 @@
     "label": "Change language",
     "locale": "{locale, select, pt {🇲🇿 Portuguese} en {🇺🇸 English} zh {🇨🇳 Chinese} other {Unknown}}",
     "selectLanguage": "Select the language",
-    "flagAlt": "English "
+    "flagAlt": "English ",
+    "currentLanguage": "Current Language"
   },
   "Manifest": {
     "name": "next-intl example"
@@ -151,6 +152,7 @@
     }
   },
   "RequestPage": {
+    "pageTitle": "Self Service ",
     "cardTitle": "Self Service Request",
     "stepDescription": "Step {step} of 4",
     "backButton": "Back",
@@ -173,7 +175,8 @@
         "title": "Error",
         "initialSubmit": "Failed to submit initial information. Please try again.",
         "otpVerify": "Failed to verify OTP. Please try again.",
-        "serviceSubmit": "Failed to submit service request. Please try again."
+        "serviceSubmit": "Failed to submit service request. Please try again.",
+        "saveData": "Failed to save data. Please try again."
       }
     }
   },
@@ -195,14 +198,27 @@
     "learn": "Learn"
   },
   "SubmissionConfirmation": {
-    "title": "YOur request has been submitted",
+    "title": "Your request has been submitted",
     "description": "Please check your email or phone for the OTP.",
     "serviceRequested": "Service Requested",
+    "selectedService": "Selected Service",
     "requestNumber": "Request Number",
-    "submissionDate": "submission date",
+    "submissionDate": "Submission date",
     "submitAnother": "Submit another request",
     "backToHome": "Go to home page",
-
+    "ticketNumber": "Ticket number",
     "checkEmail": "Check your email"
+  },
+  "BotsForm": {
+    "title": "Personal Information",
+    "description": "Please fill in your personal information so we can verify your identity.",
+    "fullName": "Full Name",
+    "email": "Email ",
+    "phoneNumber": "Phone Number",
+    "otpLabel": "OTP",
+    "resendOtp": "Resend OTP",
+    "submitOtp": "Submit OTP",
+
+    "submitButton": "Submit"
   }
 }

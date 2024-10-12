@@ -22,7 +22,8 @@
   "LocaleSwitcher": {
     "label": "Alterar idioma",
     "locale": "{locale, select, pt {🇲🇿 Português} en {🇺🇸 Inglês} zh {🇨🇳 Chinês} other {Desconhecido}}",
-    "selectLanguage": "Escolha a língua"
+    "selectLanguage": "Escolha a língua",
+    "currentLanguage": "Idioma corrente"
   },
   "Manifest": {
     "name": "exemplo next-intl"
@@ -196,11 +197,12 @@
     "title": "O seu pedido foi enviado",
     "description": "Por favor, verifique o seu e-mail ou telefone para obter a OTP.",
     "serviceRequested": "Serviço solicitado",
+    "selectedService": "Serviço Selecionado",
     "requestNumber": "Número do pedido",
     "submissionDate": "data de envio",
     "submitAnother": "Enviar outro pedido",
     "backToHome": "Ir para a página inicial",
-
+    "ticketNumber": "Ticket number",
     "checkEmail": "Verifique o seu e-mail"
   }
 }

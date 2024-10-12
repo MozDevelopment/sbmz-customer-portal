@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
 import { Locale, usePathname, useRouter } from '@/app/i18n/routing'
+import { Pathnames } from '@/app/i18n/routing'
 
 const LoadingSpinner = () => (
   <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50">
@@ -42,7 +43,9 @@ export default function LanguageSwitcher() {
   const localeChangeHandler = useCallback(
     (newLocale: string) => {
       startTransition(() => {
-        router.replace(pathname, { locale: newLocale as Locale })
+        const segments = pathname.split('/').filter(Boolean)
+        const newPathname = '/' + segments.slice(1).join('/')
+        router.push(newPathname, { locale: newLocale as Locale })
       })
     },
     [router, pathname]

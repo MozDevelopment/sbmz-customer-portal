@@ -6,7 +6,7 @@ import SBLogoIcon from './SBLogoIcon'
 import LanguageSwitcher from './language-switcher'
 
 const styles = {
-  header: 'bg-[#002391] p-5 sticky inset-x-0 top-0 w-full',
+  header: 'bg-[#002391] p-5  w-full',
   container: 'mx-auto max-w-screen-2xl flex items-center justify-between',
   logoSection: 'flex items-center',
   logoTitle: 'text-white text-2xl font-bold ml-2',
