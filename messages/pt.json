@@ -23,6 +23,7 @@
     "label": "Alterar idioma",
     "locale": "{locale, select, pt {🇲🇿 Português} en {🇺🇸 Inglês} zh {🇨🇳 Chinês} other {Desconhecido}}",
     "selectLanguage": "Escolha a língua",
+    "flagAlt": "Bandeira ",
     "currentLanguage": "Idioma corrente"
   },
   "Manifest": {
@@ -62,6 +63,7 @@
     "links": "Grupo Standard Bank"
   },
   "Card": {
+    "sectionLabel": "Opções de cartão de crédito",
     "SignatureCard": {
       "title": "Cartão Signature",
       "description": "Obtenha aconselhamento especializado sobre investimentos, gestão de património personalizada da  e suporte 24/7 de um banqueiro Signature dedicado.",
@@ -72,7 +74,8 @@
       "monthlyIncome": "Anuidade",
       "applyNow": "APLIQUE AGORA",
       "tellMeMore": "SAIBA MAIS",
-      "addToCompare": "Adicionar para comparar"
+      "addToCompare": "Adicionar para comparar",
+      "spendingCriteriaNote": "Nota sobre os critérios de despesa"
     },
     "InfiniteCard": {
       "title": "Cartão Infinite",

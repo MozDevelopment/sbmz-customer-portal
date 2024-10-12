@@ -10,6 +10,23 @@ import { InitialFormValues, OtpFormValues, RequestFormData } from '../types'
 
 const OTP_EXPIRATION_TIME = 5 * 60 * 1000 // 5 minutes in milliseconds
 
+/**
+ * Custom hook to manage the request form submission process.
+ *
+ * This hook manages the state of the request form submission process, including the current step, form data, generated OTP, and OTP expiration time. It also provides functions to handle form submission, resend OTP, and go to the previous step.
+ *
+ * @returns an object with the following properties:
+ *   - `step`: the current step of the request form submission process
+ *   - `formData`: the form data that has been submitted so far
+ *   - `initialForm`: the react-hook-form instance for the initial form
+ *   - `otpForm`: the react-hook-form instance for the OTP form
+ *   - `onServiceSelect`: a function to handle selecting a service
+ *   - `onInitialSubmit`: a function to handle submitting the initial form
+ *   - `onOtpSubmit`: a function to handle submitting the OTP form
+ *   - `onResendOtp`: a function to handle resending the OTP
+ *   - `goToPreviousStep`: a function to go to the previous step
+ *   - `otpError`: an error message if the OTP is invalid or expired
+ */
 export const useRequestForm = () => {
   const [step, setStep] = useState(0)
   const [formData, setFormData] = useState<RequestFormData>({

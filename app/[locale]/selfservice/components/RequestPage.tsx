@@ -62,7 +62,7 @@ const RequestPage: React.FC = () => {
 
   return (
     <main className="container mx-auto p-4">
-      <Card className="mx-auto w-full max-w-2xl">
+      <Card className="mx-auto">
         <CardHeader>
           <CardTitle>{t('cardTitle')}</CardTitle>
           <CardDescription>{t('stepDescription', { step: step + 1 })}</CardDescription>

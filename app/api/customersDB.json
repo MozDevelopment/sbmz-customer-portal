@@ -1,0 +1,97 @@
+[
+  {
+    "fullName": "Maria Santos",
+    "email": "maria.santos@example.com",
+    "phoneNumber": "842765431",
+    "otp": "583921",
+    "service": "National and International Transfers",
+    "status": "Pending",
+    "submissionDate": "2024-10-14T09:15:23.456Z"
+  },
+  {
+    "fullName": "João Silva",
+    "email": "joao.silva@example.net",
+    "phoneNumber": "856123789",
+    "otp": "729384",
+    "service": "Account Details Letter",
+    "status": "Submitted",
+    "submissionDate": "2024-10-14T10:30:45.789Z",
+    "ticketNumber": "TICKET-673521"
+  },
+  {
+    "fullName": "Ana Ferreira",
+    "email": "ana.ferreira@example.org",
+    "phoneNumber": "871234567",
+    "otp": "461837",
+    "service": "National and International Transfers",
+    "status": "Pending",
+    "submissionDate": "2024-10-14T11:45:12.345Z"
+  },
+  {
+    "fullName": "Pedro Oliveira",
+    "email": "pedro.oliveira@example.com",
+    "phoneNumber": "839876543",
+    "otp": "915273",
+    "service": "National and International Transfers",
+    "status": "Submitted",
+    "submissionDate": "2024-10-14T13:20:34.567Z",
+    "ticketNumber": "TICKET-891234"
+  },
+  {
+    "fullName": "Sofia Rodrigues",
+    "email": "sofia.rodrigues@example.net",
+    "phoneNumber": "864987654",
+    "otp": "378946",
+    "service": "Account Details Letter",
+    "status": "Pending",
+    "submissionDate": "2024-10-14T14:55:43.210Z"
+  },
+  {
+    "fullName": "Miguel Costa",
+    "email": "miguel.costa@example.org",
+    "phoneNumber": "853456789",
+    "otp": "624815",
+    "service": "National and International Transfers",
+    "status": "Submitted",
+    "submissionDate": "2024-10-14T16:10:56.789Z",
+    "ticketNumber": "TICKET-456789"
+  },
+  {
+    "fullName": "Inês Almeida",
+    "email": "ines.almeida@example.com",
+    "phoneNumber": "878901234",
+    "otp": "139567",
+    "service": "National and International Transfers",
+    "status": "Pending",
+    "submissionDate": "2024-10-14T17:25:09.876Z"
+  },
+  {
+    "fullName": "Rui Martins",
+    "email": "rui.martins@example.net",
+    "phoneNumber": "845678901",
+    "otp": "782340",
+    "service": "Account Details Letter",
+    "status": "Submitted",
+    "submissionDate": "2024-10-14T18:40:32.109Z",
+    "ticketNumber": "TICKET-234567"
+  },
+  {
+    "fullName": "Carla Sousa",
+    "email": "carla.sousa@example.org",
+    "phoneNumber": "867890123",
+    "otp": "506198",
+    "service": "National and International Transfers",
+    "status": "Pending",
+    "submissionDate": "2024-10-14T19:55:21.987Z"
+  },
+  {
+    "fullName": "Diogo Fernandes",
+    "email": "diogo.fernandes@example.com",
+    "phoneNumber": "834567890",
+    "otp": "359714",
+    "service": "National and International Transfers",
+    "status": "Submitted",
+    "submissionDate": "2024-10-14T21:05:43.210Z",
+    "ticketNumber": "TICKET-789012"
+  }
+]

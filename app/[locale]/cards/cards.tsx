@@ -1,12 +1,26 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
-import { useTranslations } from 'next-intl' // Importing the i18n function
-const Cards = (): JSX.Element => {
-  const t = useTranslations('Card') // Use the translation hook
+import { Label } from '@/components/ui/label'
 
-  const accountCards = [
+type ExtraInfo = {
+  label: string
+  value: string
+}
+
+type AccountCard = {
+  id: number
+  key: string
+  extraInfo: ExtraInfo | null
+  img: string
+}
+
+export default function Cards(): JSX.Element {
+  const t = useTranslations('Card')
+
+  const accountCards: AccountCard[] = [
     {
       id: 1,
       key: 'SignatureCard',
@@ -25,20 +39,20 @@ const Cards = (): JSX.Element => {
   ]
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-      {accountCards.map((card, index) => (
-        <Card key={index} className="flex flex-col">
+    <section className="grid grid-cols-1 gap-6 md:grid-cols-2" aria-label={t('sectionLabel')}>
+      {accountCards.map((card) => (
+        <Card key={card.id} className="flex flex-col">
           <CardHeader>
             <div className="flex items-start justify-between">
               <div>
-                <CardTitle className="text-2xl font-bold text-blue-900">
+                <CardTitle className="text-2xl font-bold text-primary">
                   {t(`${card.key}.title`)}
                 </CardTitle>
-                <div className="mt-2 h-1 w-16 bg-blue-500"></div>
+                <div className="mt-2 h-1 w-16 bg-primary"></div>
               </div>
               <Image
                 src={card.img}
-                alt="Credit Card"
+                alt={t(`${card.key}.title`)}
                 width={300}
                 height={60}
                 className="rounded-md"
@@ -46,53 +60,49 @@ const Cards = (): JSX.Element => {
             </div>
           </CardHeader>
           <CardContent className="flex-grow">
-            <p className="mb-4 text-gray-600">{t(`${card.key}.description`)}</p>
+            <p className="mb-4 text-muted-foreground">{t(`${card.key}.description`)}</p>
             {card.extraInfo && (
-              <p className="mb-4 text-sm text-gray-500">*When meeting the spending criteria</p>
+              <p className="mb-4 text-sm text-muted-foreground">
+                *{t('SignatureCard.spendingCriteriaNote')}
+              </p>
             )}
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div>
-                <p className="text-3xl font-bold text-blue-900">{t(`${card.key}.withdrawLimit`)}</p>
-                <p className="text-sm text-gray-500">{t(`${card.key}.dailyWithdraw`)}</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-blue-900">{t(`${card.key}.yearlyFee`)} </p>
-                <p className="text-sm text-gray-500">{t(`${card.key}.monthlyIncome`)}</p>
-              </div>
+              <CardInfoItem
+                value={t(`${card.key}.withdrawLimit`)}
+                label={t(`${card.key}.dailyWithdraw`)}
+              />
+              <CardInfoItem
+                value={t(`${card.key}.yearlyFee`)}
+                label={t(`${card.key}.monthlyIncome`)}
+              />
             </div>
             {card.extraInfo && (
-              <div>
-                <p className="text-3xl font-bold text-blue-900">{card.extraInfo.value}</p>
-                <p className="text-sm text-gray-500">{card.extraInfo.label}</p>
-              </div>
+              <CardInfoItem value={card.extraInfo.value} label={card.extraInfo.label} />
             )}
           </CardContent>
           <CardFooter className="flex flex-col items-stretch">
             <div className="mb-4 flex items-center justify-end space-x-2">
-              <Checkbox id={`compare-${index}`} />
-              <label
-                htmlFor={`compare-${index}`}
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {t(`${card.key}.addToCompare`)}
-              </label>
+              <Checkbox id={`compare-${card.id}`} />
+              <Label htmlFor={`compare-${card.id}`}>{t(`${card.key}.addToCompare`)}</Label>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
-                {t(`${card.key}.applyNow`)}
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-blue-600 text-blue-600 hover:bg-blue-50"
-              >
+              <Button className="w-full">{t(`${card.key}.applyNow`)}</Button>
+              <Button variant="outline" className="w-full">
                 {t(`${card.key}.tellMeMore`)}
               </Button>
             </div>
           </CardFooter>
         </Card>
       ))}
-    </div>
+    </section>
   )
 }
 
-export default Cards
+function CardInfoItem({ value, label }: { value: string; label: string }) {
+  return (
+    <div>
+      <p className="text-3xl font-bold text-primary">{value}</p>
+      <p className="text-sm text-muted-foreground">{label}</p>
+    </div>
+  )
+}

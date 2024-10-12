@@ -64,6 +64,7 @@
     "links": "Standard Bank Group"
   },
   "Card": {
+    "sectionLabel": "Credit Card Options",
     "SignatureCard": {
       "title": "Signature Card",
       "description": "Get expert advice on investments, bespoke support from a dedicated Executive Banker  , and 24/7 support from a dedicated Signature banker.",
@@ -74,7 +75,8 @@
       "monthlyIncome": "Annual fee",
       "applyNow": "APPLY NOW",
       "tellMeMore": "TELL ME MORE",
-      "addToCompare": "Add to compare"
+      "addToCompare": "Add to compare",
+      "spendingCriteriaNote": "Spending Criteria Note"
     },
     "InfiniteCard": {
       "title": "Infinite Card",
