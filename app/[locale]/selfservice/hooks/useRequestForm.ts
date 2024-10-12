@@ -1,12 +1,12 @@
 import { useState, useCallback } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { initialFormSchema, otpFormSchema, validateOTPSchema } from '../schema/schema'
 import { useToast } from '@/hooks/use-toast'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 import { saveFormDataToAPI, validateOtp } from '../utils/api'
 import { InitialFormValues, OtpFormValues, RequestFormData } from '../types'
-import { initialFormSchema, otpFormSchema, validateOTP } from '../schema/schema'
 
 const OTP_EXPIRATION_TIME = 5 * 60 * 1000 // 5 minutes in milliseconds
 
@@ -89,7 +89,7 @@ export const useRequestForm = () => {
     async (data) => {
       setOtpError(null)
 
-      if (!validateOTP(data.otp, generatedOTP, otpExpirationTime)) {
+      if (!validateOTPSchema(data.otp, generatedOTP, otpExpirationTime)) {
         setOtpError('Invalid or expired OTP. Please try again.')
         return
       }
