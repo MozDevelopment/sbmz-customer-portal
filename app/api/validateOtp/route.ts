@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
     // Read existing data
     const fileContent = await fs.readFile(DATA_FILE_PATH, 'utf-8')
-    let formData: RequestFormData[] = JSON.parse(fileContent)
+    const formData: RequestFormData[] = JSON.parse(fileContent)
 
     // Find the matching submission
     const submissionIndex = formData.findIndex(
