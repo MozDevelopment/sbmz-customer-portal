@@ -18,7 +18,13 @@ const styles = {
     'mt-8 pt-8 border-t border-gray-700 text-sm text-center md:text-left text-gray-400',
 }
 
-export const Footer = () => {
+/**
+ * Footer component with links to SB Group, About, Legal Notice, Privacy Statement,
+ * Access Conditions, and Copyright information.
+ *
+ * @returns {JSX.Element} The Footer component.
+ */
+export const Footer: React.FC = (): JSX.Element => {
   const t = useTranslations('Footer')
 
   return (

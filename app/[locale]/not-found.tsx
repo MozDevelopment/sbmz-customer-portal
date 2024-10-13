@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
  * It displays a 404 error message and provides a "Go back" button to go back to the previous page
  * and a "Back to Home" button to go back to the dashboard.
  */
-export default function NotFound() {
+const NotFound: React.FC = (): JSX.Element => {
   const router = useRouter()
   const t = useTranslations('NotFoundPage')
 
@@ -21,15 +21,17 @@ export default function NotFound() {
         404
       </span>
       <h2 className="font-heading my-2 text-2xl font-bold">Something&apos;s missing</h2>
-      <p>Sorry, the page you are looking for doesn&apos;t exist or has been moved.</p>
+      <p>{t('sorryPage')}</p>
       <div className="mt-8 flex justify-center gap-2">
         <Button onClick={() => router.back()} variant="default" size="lg">
-          Go back
+          {t('goBack')}
         </Button>
         <Button onClick={() => router.push('/dashboard')} variant="ghost" size="lg">
-          Back to Home
+          {t('goBackHome')}
         </Button>
       </div>
     </div>
   )
 }
+
+export default NotFound

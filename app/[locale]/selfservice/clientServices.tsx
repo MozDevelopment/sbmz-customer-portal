@@ -60,7 +60,26 @@ const CardGrid: React.FC<{
   </section>
 )
 
-const CustomerServiceLinks: React.FC = () => {
+/**
+ * CustomerServiceLinks component
+ *
+ * This component renders a page with a header and a grid of cards, each representing a customer service link.
+ *
+ * The component uses the `useTranslations` hook to load the translations for the component.
+ *
+ * The component uses the `useMemo` hook to memoize the cards data for efficiency.
+ *
+ * The component uses the `useCallback` hook to memoize the `handleCardClick` function, which logs an analytics event and navigates to the link when a card is clicked.
+ *
+ * The component renders a `main` element with a `CardHeader` component and a `CardGrid` component.
+ *
+ * The `CardHeader` component renders a header with a title and help text.
+ *
+ * The `CardGrid` component renders a grid of cards, each with a title, description, icon, and link.
+ *
+ * When a card is clicked, the component logs an analytics event and navigates to the link.
+ */
+const CustomerServiceLinks: React.FC = (): JSX.Element => {
   const t = useTranslations('CustomerServiceLinks')
   const { locale } = useParams()
   const router = useRouter()

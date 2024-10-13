@@ -18,7 +18,33 @@ const LoadingSpinner = () => (
   </div>
 )
 
-export default function LanguageSwitcher() {
+/**
+ * Renders a language switcher component.
+ *
+ * It uses the `next-intl` `useTranslations` hook to translate the labels,
+ * and the `next/router` `useRouter` hook to navigate to the same path on the
+ * selected locale.
+ *
+ * The component is disabled during navigation, and shows a spinner while
+ * navigating.
+ *
+ * The component is wrapped in a `div` with the class `container`, and the
+ * label has the class `sr-only`.
+ *
+ * The select element has the class `trigger`, and is styled to be a dropdown
+ * with a white background, gray text, a blue border and a blue spinner while
+ * navigating.
+ *
+ * The select options are rendered as a `ul` with the class `content`, and the
+ * selected option is rendered as a `li` with the class `item`.
+ *
+ * The component uses the `next/router` `usePathname` hook to get the current
+ * pathname.
+ *
+ * The component uses the `next/router` `useTransition` hook to navigate to the
+ * same path on the selected locale.
+ */
+const LanguageSwitcher: React.FC = (): JSX.Element => {
   const t = useTranslations('LocaleSwitcher')
   const locale = useLocale()
   const router = useRouter()
@@ -44,7 +70,6 @@ export default function LanguageSwitcher() {
       startTransition(() => {
         const segments = pathname.split('/').filter(Boolean)
         const newPathname = '/' + segments.slice(1).join('/')
-        // router.push(newPathname, { locale: newLocale as Locale })
         router.push(newPathname as any, { locale: newLocale as Locale })
       })
     },
@@ -77,3 +102,5 @@ export default function LanguageSwitcher() {
     </div>
   )
 }
+
+export default LanguageSwitcher

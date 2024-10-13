@@ -7,7 +7,7 @@ export default function PageContainer({
 }: {
   children: React.ReactNode
   scrollable?: boolean
-}) {
+}): JSX.Element {
   return (
     <>
       {scrollable ? (

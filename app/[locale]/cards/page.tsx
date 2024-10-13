@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import Cards from './cards'
 
-const Page: FC = () => {
+const Page: FC = (): JSX.Element => {
   return <div className="py-8"></div>
 }
 

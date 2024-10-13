@@ -16,7 +16,15 @@ const styles = {
   mainSiteLink: 'bg-[#0189ff] text-white px-4 py-2 rounded hover:bg-blue-600',
 }
 
-export const Header = () => {
+/**
+ * The Header component renders the header section of the page, including the Standard Bank logo, title, and navigation links.
+ * It also includes a language switcher component.
+ *
+ * The component uses the `next-intl` library to translate the text in the component.
+ *
+ * @returns {JSX.Element} The rendered Header component.
+ */
+export const Header: React.FC = (): JSX.Element => {
   const t = useTranslations('LocaleRootPage')
 
   return (

@@ -17,7 +17,16 @@ import InitialForm from './InitialForm'
 import SubmissionConfirmation from './SubmissionConfirmation'
 import OtpForm from './OtpForm'
 
-const RequestPage: React.FC = () => {
+/**
+ * A component that renders a multi-step form for submitting a request to a service desk.
+ *
+ * The component uses the `useRequestForm` hook to manage the form state and submission process.
+ *
+ * The component renders a card with a header, content, and footer. The card header displays the title and description of the current step. The card content displays the current step's form. The card footer displays a back button if the current step is not the first step, and a next or submit button if the current step is not the last step.
+ *
+ * The component also renders a confirmation message if the submission is successful.
+ */
+const RequestPage: React.FC = (): JSX.Element => {
   const t = useTranslations('RequestPage')
   const {
     step,

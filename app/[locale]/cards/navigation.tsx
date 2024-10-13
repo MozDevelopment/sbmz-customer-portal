@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Search, Lock } from 'lucide-react'
 import SBLogoIcon from '@/components/SBLogoIcon'
 import { useTranslations } from 'next-intl'
+import { FC } from 'react'
 
 const styles = {
   nav: 'bg-blue-900 text-white py-4 px-4',
@@ -18,7 +19,15 @@ const styles = {
   iconSize: 'w-6 h-6',
 }
 
-export default function Navigation() {
+/**
+ * The top-level navigation bar component for the site.
+ *
+ * It provides a SB logo link to the portal page, a navigation list with
+ * links to key pages, and a search and lock icon.
+ *
+ * @returns The JSX Element for the navigation bar.
+ */
+const Navigation: FC = (): JSX.Element => {
   const t = useTranslations('NavigationSite') // Load translations for this component
 
   const navItems = [
@@ -54,3 +63,5 @@ export default function Navigation() {
     </nav>
   )
 }
+
+export default Navigation

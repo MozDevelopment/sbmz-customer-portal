@@ -12,7 +12,19 @@ type SidebarItemProps = {
   href: string
 }
 
-export const SidebarItem = ({ label, iconSrc, href }: SidebarItemProps) => {
+/**
+ * A component for rendering a single item in the sidebar.
+ *
+ * @param {string} label The label for the sidebar item.
+ * @param {string} iconSrc The source URL of the icon for the sidebar item.
+ * @param {string} href The link to navigate when the sidebar item is clicked.
+ * @returns {JSX.Element} A rendered sidebar item.
+ */
+export const SidebarItem: React.FC<SidebarItemProps> = ({
+  label,
+  iconSrc,
+  href,
+}: SidebarItemProps): JSX.Element => {
   const pathname = usePathname()
   const isActive = pathname === href
 

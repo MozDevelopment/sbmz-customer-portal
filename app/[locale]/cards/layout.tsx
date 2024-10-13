@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import WebsiteHeader from '../website/web-site-header'
 import Cards from './cards'
 import Navigation from './navigation'
@@ -7,7 +8,7 @@ import Navigation from './navigation'
  *
  * @returns The JSX Element for the layout.
  */
-const Layout = () => {
+const Layout: FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gray-100">
       <WebsiteHeader />

@@ -3,13 +3,9 @@ import Footer from '@/components/Footer'
 import { Sidebar } from '@/components/sidebar'
 import { MobileHeader } from '@/components/mobile-header'
 
-export default async function PortalLayout({
-  children,
-  params: { locale },
-}: Readonly<{
+const PortalLayout: React.FC<{
   children: React.ReactNode
-  params: { locale: string }
-}>) {
+}> = async ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -22,3 +18,5 @@ export default async function PortalLayout({
     </div>
   )
 }
+
+export default PortalLayout

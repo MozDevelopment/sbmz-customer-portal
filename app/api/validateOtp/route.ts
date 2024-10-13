@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs/promises' // Import for asynchronous file system operations
 import path from 'path' // Import for path manipulation
-import { RequestFormData } from '@/app/[locale]/selfservice/types'
+import { FormStatus, RequestFormData } from '@/app/[locale]/selfservice/types'
+import { DATA_FILE_PATH } from '@/app/constants/config'
 
 /**
  * Interface defining the structure of a request form data entry.
@@ -19,8 +20,6 @@ import { RequestFormData } from '@/app/[locale]/selfservice/types'
 //   ticketNumber?: string
 //   status?: string
 // }
-
-const DATA_FILE_PATH = path.join(process.cwd(), 'api', 'data', 'formData.json') // Absolute path to the form data file
 
 /**
  * Handles POST requests to this API endpoint.
@@ -62,7 +61,7 @@ export async function POST(req: NextRequest) {
 
     // Update the submission data with the generated ticket number and status
     formData[submissionIndex].ticketNumber = ticketNumber
-    formData[submissionIndex].status = 'Submitted'
+    formData[submissionIndex].status = FormStatus.Submitted
 
     // Write the updated form data back to the JSON file
     await fs.writeFile(DATA_FILE_PATH, JSON.stringify(formData, null, 2))

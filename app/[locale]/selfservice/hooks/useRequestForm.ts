@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { initialFormSchema, otpFormSchema, validateOTPSchema } from '../schema/schema'
@@ -6,9 +6,11 @@ import { useToast } from '@/hooks/use-toast'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 import { saveFormDataToAPI, validateOtp } from '../utils/api'
-import { InitialFormValues, OtpFormValues, RequestFormData } from '../types'
+import { InitialFormValues, OtpFormValues, RequestFormData, FormStatus } from '../types'
+import { randomInt } from 'crypto'
 
 const OTP_EXPIRATION_TIME = 5 * 60 * 1000 // 5 minutes in milliseconds
+// const OTP_EXPIRATION_TIME = useMemo(() => 5 * 60 * 1000, []) // Memoizing a constant
 
 /**
  * Custom hook to manage the request form submission process.
@@ -35,7 +37,8 @@ export const useRequestForm = () => {
     phoneNumber: '',
     otp: '',
     service: null,
-    status: ' ',
+    status: FormStatus.Created,
+    submissionDate: '',
   })
   const [generatedOTP, setGeneratedOTP] = useState('')
   const [otpExpirationTime, setOtpExpirationTime] = useState(0)
@@ -58,7 +61,7 @@ export const useRequestForm = () => {
   }, [])
 
   const generateOTP = useCallback(() => {
-    const otp = Math.floor(100000 + Math.random() * 900000).toString()
+    const otp = randomInt(100000, 999999).toString() // Use cryptographically secure OTP generation
     setGeneratedOTP(otp)
     setOtpExpirationTime(Date.now() + OTP_EXPIRATION_TIME)
     return otp
@@ -92,9 +95,10 @@ export const useRequestForm = () => {
         })
       } catch (error) {
         console.error('Error submitting form:', error)
+        const message = error instanceof Error ? error.message : 'Unknown error occurred'
         toast({
           title: 'Error',
-          description: 'Failed to save form data. Please try again.',
+          description: message,
           variant: 'destructive',
         })
       }
@@ -118,7 +122,7 @@ export const useRequestForm = () => {
           ...formData,
           ...data,
           ticketNumber: result.ticketNumber,
-          status: result.status,
+          status: FormStatus.Submitted,
         }
 
         setFormData(updatedFormData)

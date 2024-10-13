@@ -12,7 +12,7 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
   params: { locale: string }
-}) {
+}): JSX.Element {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
