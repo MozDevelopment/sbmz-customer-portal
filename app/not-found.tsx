@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 
 // Define a single styles object for all classes
@@ -14,28 +15,21 @@ const styles = {
   buttonContainer: 'flex justify-center gap-2',
 }
 
-/**
- * Page rendered when the user navigates to a non-existent page.
- *
- * It displays a 404 error message and provides a "Go back" button to go back to the previous page
- * and a "Back to Home" button to go back to the dashboard.
- */
-const NotFound: React.FC = (): JSX.Element => {
+const NotFound: React.FC = () => {
   const router = useRouter()
+  const t = useTranslations('NotFound')
 
   return (
     <div className={styles.container}>
       <span className={styles.errorNumber}>404</span>
-      <h2 className={styles.errorMessage}>Something&apos;s missing</h2>
-      <p className={styles.description}>
-        Sorry, the page you are looking for doesn&apos;t exist or has been moved.
-      </p>
+      <h2 className={styles.errorMessage}>{t('title')}</h2>
+      <p className={styles.description}>{t('description')}</p>
       <div className={styles.buttonContainer}>
         <Button onClick={() => router.back()} variant="default" size="lg">
-          Go back
+          {t('goBack')}
         </Button>
         <Button onClick={() => router.push('/dashboard')} variant="ghost" size="lg">
-          Back to Home
+          {t('backToHome')}
         </Button>
       </div>
     </div>

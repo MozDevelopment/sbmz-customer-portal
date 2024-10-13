@@ -39,9 +39,15 @@
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found",
     "somethingMissing": "Something's missing",
-    "sorryPage": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "sorryPage": "Sorry, the page you are looking for doesn&apos;t exist or has been moved.",
+
     "goBack": "Go back",
     "goBackHome": "Back to Home"
+  },
+  "ErrorPage": {
+    "title": "An unexpected error has occurred",
+    "description": "We're sorry for the inconvenience. Please try again.",
+    "retry": "Retry"
   },
   "PathnamesPage": {
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to Portuguese, the URL is localized accordingly (<code>/pt/nomes-de-caminhos</code>).</p>",
