@@ -1,0 +1,52 @@
+title Processo de Recuperação de Senha - Portal, Bot e Back Office
+
+Cliente->Portal: Insere dados (número da conta, data de nascimento, última transação)
+Portal->Bot: Notifica Bot com dados inseridos
+Bot->Back Office: Solicita validação de dados na DB
+Back Office->DB: Verifica dados do cliente
+
+alt Cliente Registrado na DB (S1)
+    DB-->Back Office: Cliente encontrado com email e telefone corretos
+    Back Office-->Bot: Dados válidos
+    Bot->Cliente: Envia OTP para email ou telefone correto
+    Cliente<--Bot: Recebe OTP
+    Cliente->Bot: Insere OTP
+    Bot->Back Office: Solicita validação de OTP
+    Back Office->DB: Valida OTP
+    DB-->Back Office: OTP validado
+    Back Office-->Bot: Confirmação de sucesso
+    Bot-->Portal: Notifica conclusão do processo
+    Portal-->Cliente: Processo concluído com sucesso
+
+else Cliente Registrado com dados incorretos (S2)
+    DB-->Back Office: Cliente encontrado, mas com email ou telefone incorreto
+    Back Office-->Bot: Dados incorretos
+    Bot->Cliente: Solicita correção de dados (email, telefone)
+    loop Tentativas de correção (máx 3)
+        Cliente->Bot: Insere novos dados
+        Bot->Back Office: Envia dados corrigidos para validação
+        Back Office->DB: Valida dados corrigidos
+    end
+    alt Dados corrigidos com sucesso
+        DB-->Back Office: Dados corrigidos com sucesso
+        Back Office-->Bot: Confirmação de dados corretos
+        Bot->Cliente: Envia OTP para novos dados
+        Cliente<--Bot: Recebe OTP
+        Cliente->Bot: Insere OTP
+        Bot->Back Office: Solicita validação de OTP
+        Back Office->DB: Valida OTP
+        DB-->Back Office: OTP validado
+        Back Office-->Bot: Confirmação de sucesso
+        Bot-->Portal: Notifica conclusão do processo
+        Portal-->Cliente: Processo concluído com sucesso
+    else Tentativas falhas
+        Bot->Cliente: Não é possível continuar, tente novamente após 24HR
+        note over Bot,Cliente: Bloqueio temporário
+    end
+
+else Cliente Não Registrado na DB (S3)
+    DB-->Back Office: Cliente não encontrado
+    Back Office-->Bot: Cliente não registrado
+    Bot->Cliente: Solicita atualização de dados no Balcão
+    note over Bot,Cliente: Redirecionamento para atendimento presencial
+end

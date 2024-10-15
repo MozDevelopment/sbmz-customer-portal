@@ -1,0 +1,211 @@
+{
+  "About": {
+    "title": "Sobre"
+  },
+  "Error": {
+    "description": "<p>Infelizmente encontrámos um erro.</p><p>Pode tentar <retry>recarregar a página</retry> que estava a visitar.</p>",
+    "title": "Algo correu mal!"
+  },
+  "PageRoot": {
+    "description": "Este é um exemplo básico que demonstra a utilização de <code>next-intl</code> com o Next.js App Router. Experimente alterar a localidade no canto superior direito e veja como o conteúdo muda.",
+    "title": "Página Raiz"
+  },
+  "PageLayout": {
+    "description": "Este é um exemplo básico que demonstra a utilização de <code>next-intl</code> com o Next.js App Router. Experimente alterar a localidade no canto superior direito e veja como o conteúdo muda.",
+    "title": "Layout da Página"
+  },
+  "LocaleRootPage": {
+    "title": "Portal do Cliente",
+    "titleWebSite": "Site",
+    "navHelp": "Ajuda"
+  },
+  "LocaleSwitcher": {
+    "label": "Alterar idioma",
+    "locale": "{locale, select, pt {🇲🇿 Português} en {🇺🇸 Inglês} zh {🇨🇳 Chinês} other {Desconhecido}}",
+    "selectLanguage": "Escolha a língua",
+    "flagAlt": "Bandeira ",
+    "currentLanguage": "Idioma corrente"
+  },
+  "Manifest": {
+    "name": "exemplo next-intl"
+  },
+  "Navigation": {
+    "home": "Início",
+    "pathnames": "Nomes de caminhos",
+    "title": "Cartoes "
+  },
+  "NotFoundPage": {
+    "description": "Por favor verifique novamente a barra de endereço do navegador ou utilize a navegação para ir para uma página conhecida.",
+    "title": "Página não encontrada",
+    "somethingMissing": "Algo está faltando",
+    "sorryPage": "Lamentamos, mas a página que procura não existe ou foi movida.",
+    "goBack": "Voltar",
+    "goBackHome": "Voltar à página principal"
+  },
+  "PathnamesPage": {
+    "description": "<p>Os nomes de caminho também são internacionalizados.</p><p>Se estiver a utilizar o idioma padrão inglês, verá <code>/en/pathnames</code> na barra de endereço do navegador nesta página.</p><p>Se alterar a localização para português, o URL será localizado em conformidade (<code>/pt/nomes-de-caminhos</code>).</p>",
+    "title": "Nomes de caminhos"
+  },
+  "Footer": {
+    "legalSection": "PAIA | Fica | NCA © 2024 | standardbank.co.mz é um serviço de Internet Banking disponibilizado pelo Standard Bank, S.A., autorizado nos termos da legislação sobre consultoria financeira e serviços de intermediação financeira.",
+    "sbgroup": "Grupo Standard Bank",
+    "about": "Sobre nós",
+    "legalNotice": "Aviso Legal",
+    "privacyStatement": "Declaração de Privacidade",
+    "accessConditions": "Condições de Acesso"
+  },
+  "Portal": {
+    "title": "Bem-vindo ao Portal do Cliente",
+    "links": "Grupo Standard Bank"
+  },
+  "Dashboard": {
+    "title": "Bem-vindo ao Painel do Portal do Cliente",
+    "links": "Grupo Standard Bank"
+  },
+  "Card": {
+    "sectionLabel": "Opções de cartão de crédito",
+    "SignatureCard": {
+      "title": "Cartão Signature",
+      "description": "Obtenha aconselhamento especializado sobre investimentos, gestão de património personalizada da  e suporte 24/7 de um banqueiro Signature dedicado.",
+      "yearlyFee": "4.999,99 MZN",
+      "withdrawLimit": "25 mil",
+      "dailyWithdraw": "Levantamentos diários",
+      "monthlyFee": "Taxa mensal",
+      "monthlyIncome": "Anuidade",
+      "applyNow": "APLIQUE AGORA",
+      "tellMeMore": "SAIBA MAIS",
+      "addToCompare": "Adicionar para comparar",
+      "spendingCriteriaNote": "Nota sobre os critérios de despesa"
+    },
+    "InfiniteCard": {
+      "title": "Cartão Infinite",
+      "description": "Obtenha aconselhamento especializado sobre investimentos, suporte 24/7 de um Banqueiro Privado dedicado e acesso ilimitado* a lounges de aeroportos nacionais e internacionais através do seu Cartão .",
+      "yearlyFee": "9.499,99 MZN",
+      "withdrawLimit": "30 mil",
+      "dailyWithdraw": "Levantamentos diários",
+      "monthlyFee": "Taxa mensal",
+      "monthlyIncome": "Anuidade",
+      "extraInfoLabel": "Conta bancária offshore",
+      "extraInfoValue": "Grátis",
+      "applyNow": "APLIQUE AGORA",
+      "tellMeMore": "SAIBA MAIS",
+      "addToCompare": "Adicionar para comparar"
+    }
+  },
+  "CustomerServiceLinks": {
+    "header": "Links de Autoatendimento ao Cliente",
+    "helpText": "Olá! Como posso te ajudar?",
+    "cards": {
+      "selfService": {
+        "title": "Autoatendimento",
+        "description": "Siga passo a passo para Registar Pedidos e seja atendido automaticamente para ir ao encontro das suas necessidades.",
+        "icon": "/service-req.svg",
+        "link": "/selfservice/clientrequest"
+      },
+      "internetBanking": {
+        "title": "Internet Banking",
+        "description": "Acesse as informações da sua conta e transações. Pague contas e muito mais.",
+        "icon": "/internetbanking.svg",
+        "link": "/selfservice/internetbanking"
+      },
+      "personalAccountOpening": {
+        "title": "Abertura de Conta Pessoal",
+        "description": "Abra uma nova conta ou uma conta adicional, de forma conveniente e eficiente a partir do seu dispositivo.",
+        "icon": "/idaccount.svg",
+        "link": "/selfservice/accountopening"
+      },
+      "quiqChatBanking": {
+        "title": "Quiq Chat Banking",
+        "description": "Forma rápida e conversacional de realizar transações bancárias. Diga 'Olá' para começar a conversar.",
+        "icon": "/callcenter.svg",
+        "link": "/selfservice/quiqchat"
+      }
+    }
+  },
+  "BotsService": {
+    "header": "Serviços de Bot",
+    "helpText": "Selecione um serviço para começar",
+    "cards": {
+      "nationalTransfers": {
+        "title": "Transferências Nacionais e Internacionais",
+        "description": "Obtenha comprovante de transferência de forma rápida e segura.",
+        "icon": "/bots/international_payments.svg",
+        "link": "/selfservice/transferencias-nacionais"
+      },
+      "accountDetailsLetter": {
+        "title": "Carta de Detalhes da Conta",
+        "description": "Solicite e receba a carta com os detalhes da sua conta.",
+        "icon": "/bots/bankletter.svg",
+        "link": "/selfservice/carta-detalhes-conta"
+      },
+      "internationalTransfers": {
+        "title": "Pagamentos ",
+        "description": "Obtenha comprovativo carimbado dos pagamentos efetuados",
+        "icon": "/bots/bourderaux.svg",
+        "link": "/selfservice/transferencias-internacionais"
+      },
+      "statementsAndBalance": {
+        "title": "Extratos e Saldo",
+        "description": "Solicite o extratos detalhado da sua conta.",
+        "icon": "/bots/statement2.svg",
+        "link": "/selfservice/extratos-saldo"
+      }
+    }
+  },
+  "RequestPage": {
+    "cardTitle": "Solicitação de Autoatendimento",
+    "stepDescription": "Etapa {step} de 4",
+    "backButton": "Voltar",
+    "nextButton": "Próximo",
+    "submitButton": "Enviar",
+    "toasts": {
+      "initialSubmit": {
+        "title": "Informações iniciais enviadas",
+        "description": "Por favor, verifique seu e-mail ou telefone para o OTP."
+      },
+      "otpVerified": {
+        "title": "OTP verificado",
+        "description": "Por favor, selecione seu serviço e intervalo de datas."
+      },
+      "serviceSubmit": {
+        "title": "Solicitação de serviço enviada",
+        "description": "Seu número de ticket é {ticketNumber}"
+      },
+      "error": {
+        "title": "Erro",
+        "initialSubmit": "Falha ao enviar informações iniciais. Por favor, tente novamente.",
+        "otpVerify": "Falha ao verificar OTP. Por favor, tente novamente.",
+        "serviceSubmit": "Falha ao enviar solicitação de serviço. Por favor, tente novamente."
+      }
+    }
+  },
+  "Header": {
+    "mainNavLabel": "Navegação principal",
+    "personal": "Particulares",
+    "business": "Empresas",
+    "corporate": "Banca de Investimentos",
+    "news": "Notícias e Mídia",
+    "about": "Sobre nós",
+    "locate": "Localize-nos",
+    "contact": "Contacte-nos",
+    "flagAlt": "Bandeira de Moçambique",
+    "currentLanguage": "Idioma atual"
+  },
+  "NavigationSite": {
+    "productsAndServices": "Produtos e Serviços",
+    "standardBankConnect": "Conectar Standard Bank",
+    "learn": "Aprender"
+  },
+  "SubmissionConfirmation": {
+    "title": "O seu pedido foi enviado",
+    "description": "Por favor, verifique o seu e-mail ou telefone para obter a OTP.",
+    "serviceRequested": "Serviço solicitado",
+    "selectedService": "Serviço Selecionado",
+    "requestNumber": "Número do pedido",
+    "submissionDate": "data de envio",
+    "submitAnother": "Enviar outro pedido",
+    "backToHome": "Ir para a página inicial",
+    "ticketNumber": "Ticket number",
+    "checkEmail": "Verifique o seu e-mail"
+  }
+}

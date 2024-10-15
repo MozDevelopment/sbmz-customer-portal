@@ -17,7 +17,7 @@ const styles = {
 
 const NotFound: React.FC = () => {
   const router = useRouter()
-  const t = useTranslations('NotFound')
+  const t = useTranslations('NotFoundPage')
 
   return (
     <div className={styles.container}>
