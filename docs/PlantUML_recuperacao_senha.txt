@@ -1,0 +1,3 @@
+Escreva um novo diagrama para um Case Manager para Clientes e 1ª e 2ª Linha  de Suporte na Central de Atendimento, 
+O cliente Entra no "Portal do Cliente" regista o seu Pedido,  para Desbloqueio de Senha NETPlus, ou SMS Token Desbloqueio  
+
